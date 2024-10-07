@@ -7,8 +7,9 @@
 
         <form method="post">
             <label for="guess">Enter your guess (between 1 and 100):</label>
-            <input type="number" id="guess" name="guess" min="1" max="100" step="1" required>
-            <input type="submit" value="Submit">
+            <input type="number" id="guess" name="guess" min="1" max="100" step="1" required value="<?php if (isset($_POST['guess'])) echo $_POST['guess']; ?>" >
+            <input type="submit" name="submit" value="Submit">
+            <input type="submit" name="giveup" value="Give up">
         </form>
 
         <?php
